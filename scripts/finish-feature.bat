@@ -44,7 +44,8 @@ if errorlevel 1 (
 
 echo.
 echo Merging...
-git merge --no-ff %CURRENT_BRANCH% -m "Merge branch '%CURRENT_BRANCH%' into develop"
+set "MERGE_MSG=Merge branch '%CURRENT_BRANCH%' into develop"
+git merge --no-ff %CURRENT_BRANCH% -m "%MERGE_MSG%"
 
 if errorlevel 1 (
     color 0C
