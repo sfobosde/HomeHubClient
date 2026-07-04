@@ -13,4 +13,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - run: |
-          echo "Deploying development..."
+          echo "[DEV] Deploying development..."
