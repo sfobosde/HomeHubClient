@@ -62,15 +62,4 @@ echo ""
 echo -e "${GREEN}Feature successfully merged into develop.${NC}"
 echo -e "${GREEN}GitHub Actions will now deploy develop.${NC}"
 
-REMOTE_URL=$(git remote get-url origin)
-
-if [[ "$REMOTE_URL" =~ git@github.com:(.*)\.git ]]; then
-    ACTIONS_URL="https://github.com/${BASH_REMATCH[1]}/actions"
-elif [[ "$REMOTE_URL" =~ https://github.com/(.*)\.git ]]; then
-    ACTIONS_URL="https://github.com/${BASH_REMATCH[1]}/actions"
-fi
-
-if [ -n "$ACTIONS_URL" ]; then
-    echo "Opening GitHub Actions..."
-    xdg-open "$ACTIONS_URL" >/dev/null 2>&1 &
-fi
+xdg-open https://github.com/sfobosde/HomeHubClient/actions

@@ -99,13 +99,7 @@ echo ==============================================
 color 07
 
 :: Open GitHub Actions page
-for /f %%i in ('git remote get-url origin') do set REMOTE_URL=%%i
-
-powershell -NoProfile -Command ^
-"$u='%REMOTE_URL%';" ^
-"$u=$u -replace '^git@github.com:','https://github.com/';" ^
-"$u=$u -replace '\.git$','';" ^
-"Start-Process ($u + '/actions')"
+start https://github.com/sfobosde/HomeHubClient/actions
 
 pause
 endlocal
