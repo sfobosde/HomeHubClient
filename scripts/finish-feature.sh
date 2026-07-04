@@ -24,7 +24,7 @@ echo "Updating develop..."
 git pull origin develop
 
 echo "Merging '$CURRENT_BRANCH' into develop..."
-git merge --no-ff "$CURRENT_BRANCH" --no-edit
+git merge --no-ff "$CURRENT_BRANCH" -m "Merge branch '$CURRENT_BRANCH' into develop"
 
 echo "Pushing develop..."
 git push origin develop

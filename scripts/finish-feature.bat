@@ -25,7 +25,7 @@ git pull origin develop
 if errorlevel 1 exit /b 1
 
 echo Merging...
-git merge --no-ff "$CURRENT_BRANCH" --no-edit
+git merge --no-ff "$CURRENT_BRANCH" -m "Merge branch '$CURRENT_BRANCH' into develop"
 if errorlevel 1 exit /b 1
 
 echo Pushing develop...
