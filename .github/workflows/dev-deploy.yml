@@ -14,4 +14,3 @@ jobs:
 
       - run: |
           echo "[DEV] Deploying development..."
-          echo "[DEV] Deploying development..."
