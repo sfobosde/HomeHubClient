@@ -1,0 +1,10 @@
+services:
+  homehub-client:
+    container_name: homehub-client
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    image: homehub-client:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
