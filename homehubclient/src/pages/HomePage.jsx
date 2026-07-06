@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getHealth } from "../api/HealthApi";
+import { getHealth } from "../api/HealtApi.js";
 
 function HomePage() {
     const [status, setStatus] = useState("Checking...");
