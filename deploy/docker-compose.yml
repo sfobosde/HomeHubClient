@@ -8,3 +8,10 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+    networks:
+      - homehub-network
+
+networks:
+  homehub-network:
+    name: homehub-network
+    external: true
