@@ -10,8 +10,8 @@ services:
       - "80:80"
     networks:
       - homehub-network
-    # volumes:
-    #   - /var/www/certbot:/var/www/certbot
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt:ro
 
 networks:
   homehub-network:
