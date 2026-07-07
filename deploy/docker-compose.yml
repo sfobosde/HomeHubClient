@@ -10,6 +10,8 @@ services:
       - "80:80"
     networks:
       - homehub-network
+    # volumes:
+    #   - /var/www/certbot:/var/www/certbot
 
 networks:
   homehub-network:
