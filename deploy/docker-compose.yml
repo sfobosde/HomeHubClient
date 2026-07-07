@@ -12,7 +12,7 @@ services:
     networks:
       - homehub-network
     volumes:
-      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /opt/certs:/certs:ro
 
 networks:
   homehub-network:
