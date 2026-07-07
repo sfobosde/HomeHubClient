@@ -8,8 +8,11 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "443:443"
     networks:
       - homehub-network
+    volumes:
+      - /home/user1/certs:/certs:ro
 
 networks:
   homehub-network:
