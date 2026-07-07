@@ -12,7 +12,7 @@ services:
     networks:
       - homehub-network
     volumes:
-      - /opt/certs:/certs:ro
+      - /home/user1/certs:/certs:ro
 
 networks:
   homehub-network:
